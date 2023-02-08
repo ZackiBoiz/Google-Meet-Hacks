@@ -23,6 +23,7 @@
 		}
 		randgenbool = true;
 	}
+	let ms = parseInt(prompt("Enter [millisecond] delay between intervals:", "50"));
 
 	function genRand(length) {
 		let result = '';
@@ -48,7 +49,7 @@
 				i.dispatchEvent(ke);
 			}
 		});
-	});
+	}, ms);
 
 	let listener = function(e) {
 		if (e.key.toLowerCase() == "escape") {
