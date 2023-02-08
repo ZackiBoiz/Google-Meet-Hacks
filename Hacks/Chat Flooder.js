@@ -3,8 +3,8 @@
 		clearInterval(timer);
 		document.removeEventListener("keydown", listener);
 	} catch (e) {}
-	
-	let textarea = ".iL4fNe.qqWwaf.edOlkc.kxz0kd.orScbe.cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-INsAgc.VfPpkd-fmcmS-yrriRe-OWXEXe-di8rgd-V67aGc.VfPpkd-fmcmS-yrriRe-OWXEXe-B7I4Od.VfPpkd-ksKsZd-mWPk3d.VfPpkd-fmcmS-yrriRe-OWXEXe-mWPk3d.VfPpkd-fmcmS-yrriRe > .VfPpkd-fmcmS-wGMbrd";
+
+	let textarea = ".VfPpkd-fmcmS-wGMbrd";
 	let randlen;
 	let stringgen;
 	let randgenbool = true;
@@ -41,6 +41,11 @@
 			i.focus();
 			if (!i.value) {
 				i.value = randgenbool ? genRand(randlen) : stringgen;
+			} else {
+				const ke = new KeyboardEvent('keydown', {
+					bubbles: true, cancelable: true, keyCode: 13
+				});
+				i.dispatchEvent(ke);
 			}
 		});
 	});
