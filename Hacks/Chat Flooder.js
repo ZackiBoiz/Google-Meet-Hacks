@@ -43,9 +43,7 @@
 			if (!i.value) {
 				i.value = randgenbool ? genRand(randlen) : stringgen;
 			} else {
-				const ke = new KeyboardEvent('keydown', {
-					bubbles: true, cancelable: true, keyCode: 13
-				});
+				let ke = new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 13});
 				i.dispatchEvent(ke);
 			}
 		});
