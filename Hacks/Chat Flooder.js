@@ -10,14 +10,12 @@
 	let randgenbool = true;
 	if (confirm("Do you want to generate a custom string?")) {
 		stringgen = prompt("Enter a string", "ZackiBoiz is cool!");
-
 		if (!stringgen) {
 			stringgen = "ZackiBoiz is cool!";
 		}
 		randgenbool = false;
 	} else {
 		randlen = parseInt(prompt("How many characters for random string?", "25"));
-
 		if (!randlen) {
 			randlen = 25;
 		}
@@ -43,7 +41,14 @@
 			if (!i.value) {
 				i.value = randgenbool ? genRand(randlen) : stringgen;
 			} else {
-				let ke = new KeyboardEvent('keydown', {bubbles: true, cancelable: true, keyCode: 13});
+				const ke = new KeyboardEvent('keydown', {
+					code: 'Enter',
+					key: 'Enter',
+					charCode: 13,
+					keyCode: 13,
+					view: window,
+					bubbles: true
+				});
 				i.dispatchEvent(ke);
 			}
 		});
