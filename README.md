@@ -1,3 +1,4 @@
+# ⚠️ These hacks are no longer maintained. ⚠️
 # Google Meet Hacks
 The first Google Meet hacks, made by ZackiBoiz!
 
